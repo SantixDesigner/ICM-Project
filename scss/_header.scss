@@ -1,5 +1,11 @@
 .header{
     grid-area:header;
     background-color: $color5;
-    color:$color2;
+    opacity: 80%;
+    img{
+        max-width:75px;
+        max-height:75px;
+        margin-left: 15px;
+    }
+    display: flex;
 }

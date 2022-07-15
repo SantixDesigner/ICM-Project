@@ -1,9 +1,17 @@
 .nav{
     grid-area:nav;
     background-color: $color5;
+    opacity: 80%;
     .first-div-nav{
+        button{
+            margin-left: auto;
+        }
         .div-div{
+            margin-left: auto;
             .ul-div-div{
+                margin-left: auto;
+                margin-right: 10px;
+                text-align: right;
                 .ul-li-div-div{
                     .ul-li-a{
                         color:$color2;

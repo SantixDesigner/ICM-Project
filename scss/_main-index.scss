@@ -1,5 +1,27 @@
 .grid-index{
     display: grid;
     grid-template-areas: 
-    "header header header header header header header header header header nav nav";
+    "header header header header header header header header header header nav nav"
+    "mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex "
+    "footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex ";
+}
+.main-index{
+    margin-top: 1px;
+    grid-area: mainIndex;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    div{
+        text-align: center;
+        padding: 20px;
+        img{
+            width: 100%;
+            max-width: 400px;
+        }
+    }
 }
