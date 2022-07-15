@@ -1,0 +1,15 @@
+$color1:#3C06A7;
+$color2:#BCC8FF;
+$color3:#3F6BFC;
+$color4:#0547D4;
+$color5:#012D8C;
+*{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@import "nav";
+@import "header";
+@import "main-index";
+@import "mediaqueries";
