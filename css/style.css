@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+img {
+  transition: .15s; }
+  img:hover {
+    filter: grayscale(70%); }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  background-image: url("../assets/fondo-icm-edit-edit.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +20,15 @@
 .nav {
   grid-area: nav;
   background-color: #012D8C;
-  opacity: 80%; }
+  opacity: 80%;
+  top: 0;
+  position: sticky; }
   .nav .first-div-nav button {
-    margin-left: auto; }
+    margin-left: auto;
+    background-color: #0041cd;
+    border: 2px solid black; }
+  .nav .first-div-nav a img {
+    width: 50px; }
   .nav .first-div-nav .div-div {
     margin-left: auto; }
     .nav .first-div-nav .div-div .ul-div-div {
@@ -26,50 +45,77 @@
           color: #031a4c;
           background-size: 100% 2px; }
 
-.header {
-  grid-area: header;
-  background-color: #012D8C;
-  opacity: 80%;
-  display: flex; }
-  .header img {
-    max-width: 75px;
-    max-height: 75px;
-    margin-left: 15px; }
-
 .grid-index {
   display: grid;
-  grid-template-areas: "header header header header header header header header header header nav nav" "mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex " "footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex "; }
+  grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav" "mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex " "footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex "; }
 
 .main-index {
-  margin-top: 1px;
+  margin-top: 70px;
   grid-area: mainIndex;
-  border: 3px solid black;
-  border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 95%;
+  max-width: 800px;
   margin-bottom: 1px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   .main-index div {
     text-align: center;
-    padding: 20px; }
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: gray;
+    opacity: 90%; }
     .main-index div img {
+      z-index: 2;
       width: 100%;
       max-width: 400px; }
 
 .footer-index {
+  background-color: #012D8C;
   margin-top: 70px;
+  padding: 20px 0;
   display: flex;
   grid-area: footerIndex;
   justify-content: space-between;
   flex-wrap: wrap; }
   .footer-index div {
-    margin: 0 10%; }
+    margin: 0 5%;
+    color: #BCC8FF; }
     .footer-index div h4 {
-      font-size: 15px; }
+      font-size: 14px; }
     .footer-index div h3 {
       font-size: 15px; }
+
+.main-secundario .CBS {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #3F6BFC;
+  text-align: center;
+  padding: 10px;
+  margin-top: 70px; }
+  .main-secundario .CBS h2 {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 0.2px solid #444444; }
+  .main-secundario .CBS img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px; }
+  .main-secundario .CBS p {
+    margin-top: 10px; }
+  .main-secundario .CBS a {
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+    margin-top: 15px; }
+    .main-secundario .CBS a:hover {
+      color: green; }
 
 @media (max-width: 990px) {
   .grid-index {

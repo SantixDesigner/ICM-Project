@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 $color1:#3C06A7;
 $color2:#BCC8FF;
 $color3:#3F6BFC;
 $color4:#0547D4;
 $color5:#012D8C;
+img{
+    transition: .15s;
+    &:hover{
+        filter: grayscale(70%);
+    }
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    background-image: url('../assets/fondo-icm-edit-edit.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 *{
     margin: 0;
     padding: 0;
@@ -13,4 +27,5 @@ $color5:#012D8C;
 @import "header";
 @import "main-index";
 @import "footer";
+@import "main-secundario";
 @import "mediaqueries";

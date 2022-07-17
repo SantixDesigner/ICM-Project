@@ -1,13 +1,16 @@
 .footer-index{
+    background-color: $color5;
     margin-top: 70px;
+    padding: 20px 0;
     display: flex;
     grid-area: footerIndex;
     justify-content: space-between;
     flex-wrap: wrap;
     div{
-        margin: 0 10%;
+        margin: 0 5%;
+        color:$color2;
         h4{
-            font-size: 15px;
+            font-size: 14px;
         }
         h3{
             font-size: 15px;
