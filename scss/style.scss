@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-$color1:#3C06A7;
-$color2:#BCC8FF;
-$color3:#3F6BFC;
-$color4:#0547D4;
-$color5:#012D8C;
-img{
-    transition: .15s;
-    &:hover{
-        filter: grayscale(70%);
-    }
-}
+$color1:rgb(60, 6, 167);
+$color2:rgb(188, 200, 255);
+$color3:rgb(63, 107, 252);
+$color4:rgb(5, 71, 212);
+$color5:rgb(1, 45, 140);
 body{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
@@ -28,4 +22,12 @@ body{
 @import "main-index";
 @import "footer";
 @import "main-secundario";
+@import "main-jardin";
+@import "main-primario";
 @import "mediaqueries";
+img{
+    transition: .15s;
+    &:hover{
+        filter: grayscale(70%);
+    }
+}

@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-img {
-  transition: .15s; }
-  img:hover {
-    filter: grayscale(70%); }
-
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
@@ -19,31 +14,96 @@ body {
 
 .nav {
   grid-area: nav;
-  background-color: #012D8C;
-  opacity: 80%;
+  background-color: rgba(1, 45, 140, 0.8);
   top: 0;
-  position: sticky; }
-  .nav .first-div-nav button {
+  position: sticky;
+  z-index: 2; }
+  .nav ul {
+    margin-top: 25px;
+    display: flex;
     margin-left: auto;
-    background-color: #0041cd;
-    border: 2px solid black; }
-  .nav .first-div-nav a img {
+    margin-right: 30px; }
+    .nav ul li {
+      margin-left: 10px;
+      list-style: none; }
+      .nav ul li a {
+        text-decoration: none;
+        color: white; }
+    .nav ul .liClass {
+      margin-top: 10px; }
+      .nav ul .liClass a {
+        color: white;
+        cursor: pointer; }
+        .nav ul .liClass a i {
+          width: 0;
+          height: 0;
+          border-top: 10px solid #bcc8ff;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          position: absolute;
+          transform: translate(5px, 10px); }
+      .nav ul .liClass .btnSelec2 {
+        flex-direction: column;
+        transform: translate(-100px, -200px);
+        position: absolute;
+        background-color: rgba(1, 45, 140, 0.8);
+        transition: .5s ease-in-out;
+        width: 200px; }
+        .nav ul .liClass .btnSelec2 li {
+          margin-top: 5px; }
+          .nav ul .liClass .btnSelec2 li a {
+            transition: .1s ease-in-out; }
+            .nav ul .liClass .btnSelec2 li a:hover {
+              color: #3f6bfc; }
+      .nav ul .liClass .showS {
+        transform: translate(-100px, -4.5px);
+        padding: 0px 5px 5px 0; }
+  .nav div:nth-of-type(1) a img {
     width: 50px; }
-  .nav .first-div-nav .div-div {
+  .nav div:nth-of-type(2) .btnSelec {
+    display: none; }
+
+@media (max-width: 768px) {
+  .nav .ul-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    transform: translate(-61vw, -25px);
+    height: 100vh;
+    width: 60vw;
+    transition: .3s ease-in-out; }
+    .nav .ul-nav #liId {
+      cursor: pointer; }
+      .nav .ul-nav #liId a {
+        color: white; }
+        .nav .ul-nav #liId a i {
+          width: 0;
+          height: 0;
+          border-top: 10px solid #bcc8ff;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          position: absolute;
+          transform: translate(5px, 10px); }
+      .nav .ul-nav #liId .btnSelec2 {
+        transform: translate(-100vw, -25px);
+        flex-direction: column;
+        transition: .2s ease-in-out;
+        background-color: transparent; }
+        .nav .ul-nav #liId .btnSelec2 li {
+          margin-top: 10px; }
+      .nav .ul-nav #liId .showS {
+        transform: translate(-5vw, -25px); }
+  .nav .show {
+    transform: translate(-1px, -25px); }
+  .nav div:nth-of-type(2) {
     margin-left: auto; }
-    .nav .first-div-nav .div-div .ul-div-div {
-      margin-left: auto;
-      margin-right: 10px;
-      text-align: right; }
-      .nav .first-div-nav .div-div .ul-div-div .ul-li-div-div .ul-li-a {
-        color: #BCC8FF;
-        transition: .1s;
-        background-image: radial-gradient(white, white);
-        background-position: 50% 100%;
-        background-size: 0% 0%, 2.5px; }
-        .nav .first-div-nav .div-div .ul-div-div .ul-li-div-div .ul-li-a:hover {
-          color: #031a4c;
-          background-size: 100% 2px; }
+    .nav div:nth-of-type(2) .btnSelec {
+      margin: 20px;
+      display: block;
+      font-size: 35px;
+      cursor: pointer; } }
 
 .grid-index {
   display: grid;
@@ -61,19 +121,22 @@ body {
   flex-direction: column;
   position: relative; }
   .main-index div {
+    position: relative;
     text-align: center;
     padding: 20px;
     border-radius: 20px;
     font-weight: bold;
-    background-color: gray;
-    opacity: 90%; }
+    background-color: rgba(128, 128, 128, 0.8); }
+    .main-index div::before {
+      position: absolute;
+      background-image: url(../assets/gris.png);
+      opacity: .8; }
     .main-index div img {
-      z-index: 2;
       width: 100%;
       max-width: 400px; }
 
 .footer-index {
-  background-color: #012D8C;
+  background-color: #012d8c;
   margin-top: 70px;
   padding: 20px 0;
   display: flex;
@@ -82,7 +145,9 @@ body {
   flex-wrap: wrap; }
   .footer-index div {
     margin: 0 5%;
-    color: #BCC8FF; }
+    color: #bcc8ff;
+    display: flex;
+    flex-wrap: wrap; }
     .footer-index div h4 {
       font-size: 14px; }
     .footer-index div h3 {
@@ -94,7 +159,7 @@ body {
   margin: 0 auto;
   width: 90%;
   max-width: 1000px;
-  background-color: #3F6BFC;
+  background-color: #3f6bfc;
   text-align: center;
   padding: 10px;
   margin-top: 70px; }
@@ -114,9 +179,42 @@ body {
     color: black;
     transition: .2s;
     margin-top: 15px; }
-    .main-secundario .CBS a:hover {
-      color: green; }
+    .main-secundario .CBS a img {
+      width: 60%; }
+
+.main-jardin {
+  margin-top: 70px; }
+  .main-jardin div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.8);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #bcc8ff;
+    padding: 20px; }
+    .main-jardin div iframe {
+      margin: 0 auto;
+      width: 100%; }
+  .main-jardin h2 {
+    border-bottom: .1px solid black; }
+
+.main-primario {
+  margin-top: 70px; }
+  .main-primario .div-main-prim {
+    background-color: #bcc8ff;
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    font-weight: bold; }
+    .main-primario .div-main-prim p {
+      text-decoration: overline; }
 
 @media (max-width: 990px) {
   .grid-index {
     grid-template-areas: "header header header header header header header header header header header header" "nav nav nav nav nav nav nav nav nav nav nav nav" "mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex mainIndex" "footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex footerIndex"; } }
+
+img {
+  transition: .15s; }
+  img:hover {
+    filter: grayscale(70%); }

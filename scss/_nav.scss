@@ -1,38 +1,127 @@
 .nav{
     grid-area:nav;
-    background-color: $color5;
-    opacity: 80%;
+    background-color: rgba(1, 45, 140, .8);
     top: 0;
     position: sticky;
-    .first-div-nav{
-        button{
-            margin-left: auto;
-            background-color: #0041cd;
-            border: 2px solid black;
-        }
-        a{
-            img{
-                width:50px;
+    z-index: 2;
+    ul{
+        margin-top: 25px;
+        display: flex;
+        margin-left: auto;
+        margin-right: 30px;
+        li{
+            margin-left: 10px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: white;
             }
         }
-        .div-div{
-            margin-left: auto;
-            .ul-div-div{
-                margin-left: auto;
-                margin-right: 10px;
-                text-align: right;
-                .ul-li-div-div{
-                    .ul-li-a{
-                        color:$color2;
-                        transition: .1s;
-                        background-image: radial-gradient(white, white);
-                        background-position: 50% 100%;
-                        background-size: 0% 0%, 2.5px;
+        .liClass{
+            margin-top: 10px;
+            a{
+                color: white;
+                cursor: pointer;
+                i{
+                    width: 0; 
+                    height: 0; 
+                    border-top: 10px solid $color2;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    position: absolute; 
+                    transform: translate(5px,10px)
+                }
+            }
+            .btnSelec2{
+                flex-direction: column;
+                transform: translate(-100px,-200px);
+                position: absolute;
+                background-color: rgba(1, 45, 140, .8);
+                transition: .5s ease-in-out;
+                width: 200px;
+                li{
+                    margin-top: 5px;
+                    a{
+                        transition: .1s ease-in-out;
                         &:hover{
-                            color: #031a4c;
-                            background-size: 100% 2px;
+                            color: $color3;
                         }
                     }
+                }
+            }
+            .showS{
+                transform: translate(-100px,-4.5px);
+                padding: 0px 5px 5px 0;
+            }
+        }
+    }
+    div{
+        &:nth-of-type(1){
+            a{
+                img{
+                    width: 50px;
+                }
+            }
+        }
+        &:nth-of-type(2){
+            .btnSelec{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 768px){
+    .nav{
+        .ul-nav{
+            background-color: rgba($color: #000000, $alpha: 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            transform: translate(-61vw,-25px);
+            height: 100vh;
+            width: 60vw;
+            transition: .3s ease-in-out;
+            #liId{
+                cursor: pointer;
+                a{
+                    color: white;
+                    i{
+                        width: 0; 
+                        height: 0; 
+                        border-top: 10px solid $color2;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        position: absolute; 
+                        transform: translate(5px,10px)
+                    }
+                }
+                .btnSelec2{
+                    transform: translate(-100vw,-25px);
+                    flex-direction: column;
+                    transition: .2s ease-in-out;
+                    background-color: transparent;
+                    li{
+                        margin-top: 10px;
+                    }
+                }
+                .showS{
+                    transform: translate(-5vw, -25px);
+                    
+                }
+            }
+        }
+        .show{
+            transform: translate(-1px,-25px);
+        }
+        div{
+            &:nth-of-type(2){
+                margin-left: auto;
+                .btnSelec{
+                    margin: 20px;
+                    display: block;
+                    font-size: 35px;
+                    cursor: pointer;
                 }
             }
         }

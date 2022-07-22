@@ -1,0 +1,13 @@
+.main-primario{
+    margin-top: 70px;
+    .div-main-prim{
+        background-color: $color2;
+        width: 80%;
+        padding: 20px;
+        margin: 0 auto;
+        font-weight: bold;
+        p{
+            text-decoration: overline;
+        }
+    }
+}

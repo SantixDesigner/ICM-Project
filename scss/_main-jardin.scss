@@ -1,0 +1,20 @@
+.main-jardin{
+    margin-top: 70px;
+    div{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($color: gray, $alpha: 0.8);
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        color: $color2;
+        padding: 20px;
+        iframe{
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    h2{
+        border-bottom: .1px solid black;
+    }
+}
