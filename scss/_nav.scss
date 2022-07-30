@@ -34,15 +34,17 @@
             }
             .btnSelec2{
                 flex-direction: column;
-                transform: translate(-100px,-200px);
+                transform: translate(-100px, -3px);
                 position: absolute;
+                padding: 0px 0px 0px 0;
                 background-color: rgba(1, 45, 140, .8);
+                height: 0;
                 transition: .5s ease-in-out;
                 width: 200px;
                 li{
+                    visibility: hidden;
                     margin-top: 5px;
                     a{
-                        transition: .1s ease-in-out;
                         &:hover{
                             color: $color3;
                         }
@@ -50,8 +52,11 @@
                 }
             }
             .showS{
-                transform: translate(-100px,-4.5px);
                 padding: 0px 5px 5px 0;
+                li{
+                    visibility:visible;
+                }
+                height: 120px;
             }
         }
     }
